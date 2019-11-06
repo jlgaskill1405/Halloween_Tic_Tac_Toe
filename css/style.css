@@ -3,13 +3,13 @@
   --glowing-orange-color: rgb(255, 188, 0, 0.7);
   --glowing-yellow-color: rgb(254,241,0,0.7);
   --glowing-red-color: rgb(138, 3, 3, 0.5);
-  --pumpkin: url('/img/jackolantern.png');
-  --xbones: url('/img/skull_xbones.png');
+  --pumpkin: url('../img/jackolantern.png');
+  --xbones: url('../img/skull_xbones.png');
 }
 
 @font-face {
   font-family: bloody;
-  src: url("/fonts/shlop.regular.ttf");
+  src: url("../fonts/shlop.regular.ttf");
   color: #8a0303;
 }
 
@@ -23,7 +23,7 @@
 }
 
 body {
-  background: url("/img/Halloween_Scary_Pupmkins_Background.jpg") no-repeat center center/cover;
+  background: url("../img/Halloween_Scary_Pupmkins_Background.jpg") no-repeat center center/cover;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
@@ -94,10 +94,8 @@ body {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  /* -ms-grid-rows: (13rem)[3]; */
-  -ms-grid-rows: 13rem 13rem 13rem;
-  /* -ms-grid-columns: (13rem)[3]; */
-  -ms-grid-columns: 13rem 13rem 13rem;
+  -ms-grid-rows: (13rem)[3];
+  -ms-grid-columns: (13rem)[3];
       grid-template: repeat(3, 13rem)/repeat(3, 13rem);
   gap: 10px;
   -webkit-box-pack: center;
@@ -298,20 +296,16 @@ body {
   margin-left: 2rem;
 }
 
-#audio-player {
-  display: none;
-}
-
 .pumpkin {
-  background: url("/img/jackolantern.png") no-repeat center center/contain;
+  background: url("../img/jackolantern.png") no-repeat center center/contain;
 }
 
 .skull_xbones {
-  background: url("/img/skull_xbones.png") no-repeat center center/contain;
+  background: url("../img/skull_xbones.png") no-repeat center center/contain;
 }
 
 .cat {
-  background: url("/img/cat.png") no-repeat center center/contain;
+  background: url("../img/cat.png") no-repeat center center/contain;
 }
 
 #winner-image-container {
