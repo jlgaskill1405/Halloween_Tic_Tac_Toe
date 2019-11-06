@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Halloween Tic Tac Toe</title>
+    
+</head>
+<body>
+    <div class="container">
+
+       <div class="game-container">
+                
+                <div class="board-container">
+    
+                    <div class="horizontal-bar" id="hb1"><img src="/img/bar1-4.gif"></div>
+                    <div class="horizontal-bar" id="hb2"><img src="/img/bar1-4.gif"></div>
+                    <div class="vertical-bar" id="vb1"><img src="/img/vertical.gif"></div>
+                    <div class="vertical-bar" id="vb2"><img src="/img/vertical.gif"></div>
+
+                    <div id="game-grid-container">
+                        <div id="game-grid">
+                            <div id="cell-1" class="grid-cell"></div>
+                            <div id="cell-2" class="grid-cell"></div>
+                            <div id="cell-3" class="grid-cell"></div>
+                            <div id="cell-4" class="grid-cell"></div>
+                            <div id="cell-5" class="grid-cell"></div>
+                            <div id="cell-6" class="grid-cell"></div>
+                            <div id="cell-7" class="grid-cell"></div>
+                            <div id="cell-8" class="grid-cell"></div>
+                            <div id="cell-9" class="grid-cell"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="legend-container">
+                    <div class="legend">
+    
+                        <div class="o-container">
+                            <div class="img-container">
+                                <div id="jackolantern" class="pumpkin"></div>
+                            </div>
+                            <div class="equals"><h1>=</h1></div>
+                            <div class="score"><h1 id="o-score">0</h1></div>
+                        </div>
+                        <div class="x-container">
+                            <div class="img-container">
+                                <div id="xbones" class="skull_xbones"></div>
+                            </div>
+                            <div class="equals"><h1>=</h1></div>
+                            <div class="score"><h1 id="x-score">0</h1></div>
+                        </div>
+                        <div class="cat-container">
+                            <div class="img-container">
+                                <div id="cat" class="cat"></div>
+                            </div>
+                            <div class="equals"><h1>=</h1></div>
+                            <div class="score"><h1 id="cat-score">0</h1></div>
+                        </div>
+                        <div class="whos-move-container">
+                            <div class="whos-move">Player: </div>
+                            <div id="player-icon" class="pumpkin"></div>
+                        </div>
+    
+                    </div>
+                </div>
+
+            </div>
+
+        </div>    
+        <!-- <audio controls autoplay="true" id="audio-player">
+        <source src="/audio/micheal jackson - thriller.mp3" type="audio/ogg">
+        Your browser does not support the audio element.
+        </audio> -->
+    </container>
+   <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="winner-image-container">
+                <div id="winner-image"></div>
+            </div>
+            <div id="winner-message">
+                <h1>Wins!</h1>
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>

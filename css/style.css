@@ -1,0 +1,414 @@
+:root {
+  --blood-red-color: rgb(101, 255, 0, 0.5);
+  --glowing-orange-color: rgb(255, 188, 0, 0.7);
+  --glowing-yellow-color: rgb(254,241,0,0.7);
+  --glowing-red-color: rgb(138, 3, 3, 0.5);
+  --pumpkin: url('/img/jackolantern.png');
+  --xbones: url('/img/skull_xbones.png');
+}
+
+@font-face {
+  font-family: bloody;
+  src: url("/fonts/shlop.regular.ttf");
+  color: #8a0303;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: bloody;
+  color: var(--blood-red-color);
+}
+
+body {
+  background: url("/img/Halloween_Scary_Pupmkins_Background.jpg") no-repeat center center/cover;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.game-container {
+  position: relative;
+  margin: 6rem auto;
+  height: 50rem;
+  width: 65rem;
+  background: rgba(24, 24, 24, 0.9);
+  border-radius: 20px;
+  -webkit-box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.game-container .board-container {
+  position: relative;
+  height: 100%;
+  width: 40rem;
+}
+
+.game-container .board-container #hb1 {
+  position: absolute;
+  top: 17rem;
+  left: 2rem;
+  z-index: 1;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.game-container .board-container #hb2 {
+  position: absolute;
+  top: 30.5rem;
+  left: 2rem;
+  z-index: 3;
+}
+
+.game-container .board-container #vb2 {
+  position: absolute;
+  top: 6rem;
+  left: 26.5rem;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  z-index: 2;
+}
+
+.game-container .board-container #vb1 {
+  position: absolute;
+  top: 6rem;
+  left: 13rem;
+  z-index: 4;
+}
+
+.game-container .board-container #game-grid-container #game-grid {
+  position: absolute;
+  top: 4.5rem;
+  left: 1rem;
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  /* -ms-grid-rows: (13rem)[3]; */
+  -ms-grid-rows: 13rem 13rem 13rem;
+  /* -ms-grid-columns: (13rem)[3]; */
+  -ms-grid-columns: 13rem 13rem 13rem;
+      grid-template: repeat(3, 13rem)/repeat(3, 13rem);
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+
+.game-container .board-container #game-grid-container #game-grid .grid-cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 12rem;
+  width: 12rem;
+}
+
+.game-container .board-container #game-grid-container #game-grid .grid-cell:hover {
+  cursor: pointer;
+}
+
+.game-container .legend-container {
+  width: 25rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.game-container .legend-container .legend {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.game-container .legend-container .legend .o-container {
+  height: 28%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.game-container .legend-container .legend .o-container .img-container {
+  height: 100%;
+}
+
+.game-container .legend-container .legend .o-container .img-container #jackolantern {
+  margin: 2.5rem 1rem;
+  height: 11rem;
+  width: 11rem;
+}
+
+.game-container .legend-container .legend .x-container {
+  height: 28%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.game-container .legend-container .legend .x-container .img-container {
+  height: 100%;
+}
+
+.game-container .legend-container .legend .x-container .img-container #xbones {
+  margin: 2.5rem 1rem;
+  height: 11rem;
+  width: 11rem;
+}
+
+.game-container .legend-container .legend .cat-container {
+  height: 28%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.game-container .legend-container .legend .cat-container .img-container {
+  height: 100%;
+}
+
+.game-container .legend-container .legend .cat-container .img-container #cat {
+  margin: 1rem 1rem;
+  height: 11rem;
+  width: 11rem;
+}
+
+.game-container .legend-container .legend .whos-move-container {
+  width: 100%;
+  height: 16%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.game-container .legend-container .legend .whos-move-container #player-icon {
+  margin-left: 1rem;
+  height: 8rem;
+  width: 8rem;
+}
+
+.game-container:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  background: -webkit-gradient(linear, left top, right top, from(var(--glowing-red-color)), to(var(--glowing-orange-color)));
+  background: linear-gradient(90deg, var(--glowing-red-color), var(--glowing-orange-color));
+  background-size: 200% 200%;
+  -webkit-animation: animateglow 4s ease infinite;
+          animation: animateglow 4s ease infinite;
+}
+
+@-webkit-keyframes animateglow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes animateglow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.whos-move {
+  font-size: 80px;
+}
+
+.equals, .score {
+  margin-top: 4rem;
+  font-size: 50px;
+}
+
+.score {
+  margin-left: 2rem;
+}
+
+#audio-player {
+  display: none;
+}
+
+.pumpkin {
+  background: url("/img/jackolantern.png") no-repeat center center/contain;
+}
+
+.skull_xbones {
+  background: url("/img/skull_xbones.png") no-repeat center center/contain;
+}
+
+.cat {
+  background: url("/img/cat.png") no-repeat center center/contain;
+}
+
+#winner-image-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#winner-image {
+  height: 20rem;
+  width: 20rem;
+}
+
+#winner-icon {
+  height: 5rem;
+  width: 5rem;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #0a0a0a;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+
+.modal-content #winner-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  font-size: 4rem;
+}
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  font-size: 3rem;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+  z-index: 20;
+}
+/*# sourceMappingURL=style.css.map */
