@@ -1,5 +1,5 @@
 :root {
-  --blood-red-color: rgb(101, 255, 0, 0.5);
+  --slime-green-color: rgb(101, 255, 0, 0.5);
   --glowing-orange-color: rgb(255, 188, 0, 0.7);
   --glowing-yellow-color: rgb(254,241,0,0.7);
   --glowing-red-color: rgb(138, 3, 3, 0.5);
@@ -19,15 +19,24 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: bloody;
-  color: var(--blood-red-color);
+  color: var(--slime-green-color);
 }
 
 body {
-  background: url("../img/Halloween_Scary_Pupmkins_Background.jpg") no-repeat center center/cover;
+  background: url("../img/Halloween_Scary_Pupmkins_Background.png") no-repeat center center/cover;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .game-container {
@@ -54,9 +63,37 @@ body {
   width: 40rem;
 }
 
+.game-container .board-container #cross-grid-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.game-container .board-container #game-grid-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.game-container .board-container .horizontal-bar {
+  width: 37rem;
+  height: 1rem;
+  background: url("../img/bar1-4.gif") no-repeat center center/cover;
+}
+
+.game-container .board-container .vertical-bar {
+  height: 37rem;
+  width: 1rem;
+  background: url("../img/vertical.gif") no-repeat center center/cover;
+}
+
 .game-container .board-container #hb1 {
   position: absolute;
-  top: 17rem;
+  top: 17.2rem;
   left: 2rem;
   z-index: 1;
   -webkit-transform: rotateY(180deg);
@@ -65,7 +102,7 @@ body {
 
 .game-container .board-container #hb2 {
   position: absolute;
-  top: 30.5rem;
+  top: 30.8rem;
   left: 2rem;
   z-index: 3;
 }
@@ -89,7 +126,7 @@ body {
 .game-container .board-container #game-grid-container #game-grid {
   position: absolute;
   top: 4.5rem;
-  left: 1rem;
+  left: .75rem;
   height: 100%;
   width: 100%;
   display: -ms-grid;
@@ -255,8 +292,6 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(var(--glowing-red-color)), to(var(--glowing-orange-color)));
   background: linear-gradient(90deg, var(--glowing-red-color), var(--glowing-orange-color));
   background-size: 200% 200%;
-  -webkit-animation: animateglow 4s ease infinite;
-          animation: animateglow 4s ease infinite;
 }
 
 @-webkit-keyframes animateglow {
@@ -404,5 +439,52 @@ body {
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
   z-index: 20;
+}
+
+@media (max-width: 1300px), (max-height: 800px) {
+  .game-container {
+    height: 40rem;
+  }
+  .game-container .board-container #hb1 {
+    top: 12.9rem;
+    left: 1.3rem;
+  }
+  .game-container .board-container #hb2 {
+    top: 25.9rem;
+    left: 1.3rem;
+  }
+  .game-container .board-container #vb2 {
+    top: 1.5rem;
+    left: 25.8rem;
+  }
+  .game-container .board-container #vb1 {
+    top: 1.5rem;
+    left: 12.8rem;
+  }
+  .game-container .board-container #game-grid-container #game-grid {
+    top: .50rem;
+    left: .75rem;
+    gap: 1px;
+  }
+  .game-container .board-container #game-grid-container #game-grid .grid-cell {
+    height: 11rem;
+    width: 11rem;
+  }
+  .game-container .legend-container .legend .o-container .img-container #jackolantern {
+    margin: 1.5rem 1rem;
+  }
+  .game-container .legend-container .legend .x-container .img-container #xbones {
+    margin: 1.5rem 1rem;
+  }
+  .game-container .legend-container .legend .cat-container .img-container #cat {
+    margin: .1rem 1rem;
+  }
+  .equals, .score {
+    margin-top: 3rem;
+    font-size: 50px;
+  }
+  .score {
+    margin-left: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

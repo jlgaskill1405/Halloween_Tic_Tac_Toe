@@ -1,0 +1,110 @@
+@media (max-width: 1300px), (max-height: 800px) {
+
+.game-container{
+
+    height: 40rem;
+
+    .board-container {
+        
+        #hb1 {
+
+            top: 12.9rem;
+            left: 1.3rem;
+        }
+
+        #hb2{
+            top: 25.9rem;
+            left: 1.3rem;
+        }   
+        #vb2{
+    
+            top: 1.5rem;
+            left: 25.8rem;
+        }
+    
+        #vb1{
+
+            top: 1.5rem;
+            left: 12.8rem;
+        }
+
+        #game-grid-container{
+            
+            #game-grid{
+                top: .50rem;
+                left: .75rem;
+                gap: 1px;
+
+                .grid-cell{
+                    height: 11rem;
+                    width: 11rem;  
+                }
+            }
+        }
+    
+    }
+
+    .legend-container{
+
+        .legend{
+
+            .o-container{
+
+                .img-container{
+
+                    #jackolantern{
+                        margin: 1.5rem 1rem;
+                    }
+                }
+
+            }
+            
+            .x-container{
+
+                .img-container{
+                    #xbones{
+                        margin: 1.5rem 1rem ;    
+                    }
+                }
+            }
+            .cat-container{
+
+                .img-container{
+
+                    #cat{
+                        margin: .1rem 1rem;    
+                    }
+                }
+
+            }
+
+            // .whos-move-container{
+            //     width: 100%;
+            //     height: 16%;
+            //     display: flex;
+            //     flex-direction: row;
+            //     align-items: center;
+            //     justify-content: center;
+            //     text-align: center;
+                
+            //     #player-icon{
+            //         margin-left: 1rem;
+            //         height: 8rem;
+            //         width: 8rem;
+            //     }
+            // }
+        }
+
+    }
+}
+
+    .equals, .score{
+        margin-top: 3rem;
+        font-size: 50px;
+    }
+
+    .score{
+        margin-left: 2rem;
+    }
+
+}
