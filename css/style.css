@@ -568,4 +568,209 @@ body {
     font-size: 50px;
   }
 }
+
+@media (max-width: 800px), (max-height: 650px) {
+  .game-container {
+    height: 30rem;
+    width: 40rem;
+  }
+  .game-container .board-container .horizontal-bar {
+    width: 25rem;
+    height: 1rem;
+  }
+  .game-container .board-container .vertical-bar {
+    height: 25rem;
+    width: 1rem;
+  }
+  .game-container .board-container #hb1, .game-container .board-container #hb2 {
+    left: 1.3rem;
+  }
+  .game-container .board-container #hb1 {
+    top: 10.5rem;
+  }
+  .game-container .board-container #hb2 {
+    top: 19rem;
+  }
+  .game-container .board-container #vb1, .game-container .board-container #vb2 {
+    top: 2.5rem;
+  }
+  .game-container .board-container #vb2 {
+    left: 17.3rem;
+  }
+  .game-container .board-container #vb1 {
+    left: 9rem;
+  }
+  .game-container .board-container #game-grid-container #game-grid {
+    top: 3rem;
+    left: 1.3rem;
+    -ms-grid-rows: (7.5rem)[3];
+    -ms-grid-columns: (7.5rem)[3];
+        grid-template: repeat(3, 7.5rem)/repeat(3, 7.5rem);
+    gap: 15px;
+  }
+  .game-container .board-container #game-grid-container #game-grid .grid-cell {
+    height: 7.5rem;
+    width: 7.5rem;
+  }
+  .game-container .legend-container .legend .o-container {
+    padding-top: 2rem;
+  }
+  .game-container .legend-container .legend .o-container .img-container #jackolantern {
+    margin: 1.5rem 1rem;
+    height: 5rem;
+    width: 5rem;
+  }
+  .game-container .legend-container .legend .x-container {
+    padding-top: 1rem;
+  }
+  .game-container .legend-container .legend .x-container .img-container #xbones {
+    margin: 1.5rem 1rem;
+    height: 5rem;
+    width: 5rem;
+  }
+  .game-container .legend-container .legend .cat-container {
+    padding-bottom: 3rem;
+  }
+  .game-container .legend-container .legend .cat-container .img-container #cat {
+    margin: .8rem 1rem;
+    height: 5rem;
+    width: 5rem;
+  }
+  .game-container .legend-container .legend .whos-move-container #player-icon {
+    height: 4rem;
+    width: 4rem;
+  }
+  .equals, .score {
+    margin-top: 1.8rem;
+    font-size: 30px;
+  }
+  .score {
+    margin-left: 1.5rem;
+  }
+  .whos-move {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .game-container {
+    height: 45rem;
+    width: 22rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .game-container .board-container {
+    width: 100%;
+    height: 29rem;
+  }
+  .game-container .board-container .horizontal-bar {
+    width: 21rem;
+    height: .5rem;
+  }
+  .game-container .board-container .vertical-bar {
+    height: 21rem;
+    width: .5rem;
+  }
+  .game-container .board-container #hb1, .game-container .board-container #hb2 {
+    left: .5rem;
+  }
+  .game-container .board-container #hb1 {
+    top: 11.4rem;
+  }
+  .game-container .board-container #hb2 {
+    top: 18.3rem;
+  }
+  .game-container .board-container #vb1, .game-container .board-container #vb2 {
+    top: 5rem;
+  }
+  .game-container .board-container #vb2 {
+    left: 14.2rem;
+  }
+  .game-container .board-container #vb1 {
+    left: 7.4rem;
+  }
+  .game-container .board-container #game-grid-container #game-grid {
+    top: 5.2rem;
+    left: 0;
+    -ms-grid-rows: (6rem)[3];
+    -ms-grid-columns: (6rem)[3];
+        grid-template: repeat(3, 6rem)/repeat(3, 6rem);
+    gap: 15px;
+  }
+  .game-container .board-container #game-grid-container #game-grid .grid-cell {
+    height: 6rem;
+    width: 6rem;
+  }
+  .game-container .legend-container {
+    width: 100%;
+    height: 16rem;
+  }
+  .game-container .legend-container .legend {
+    padding: 0;
+  }
+  .game-container .legend-container .legend .o-container, .game-container .legend-container .legend .x-container, .game-container .legend-container .legend .cat-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .game-container .legend-container .legend .o-container {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    padding: 0;
+    height: 4rem;
+    width: 100%;
+  }
+  .game-container .legend-container .legend .o-container .img-container #jackolantern {
+    margin: 0 0;
+    height: 4rem;
+    width: 4rem;
+  }
+  .game-container .legend-container .legend .x-container {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+  }
+  .game-container .legend-container .legend .x-container .img-container #xbones {
+    margin: 0 0;
+    height: 4rem;
+    width: 4rem;
+  }
+  .game-container .legend-container .legend .cat-container {
+    padding-bottom: 0rem;
+    position: absolute;
+    top: 11rem;
+    left: 0;
+  }
+  .game-container .legend-container .legend .cat-container .img-container #cat {
+    margin: 0 0;
+    height: 4rem;
+    width: 4rem;
+  }
+  .game-container .legend-container .legend .whos-move-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .game-container .legend-container .legend .whos-move-container #player-icon {
+    height: 4rem;
+    width: 4rem;
+  }
+  .equals, .score {
+    margin-top: 0rem;
+    margin-left: 1rem;
+    font-size: 25px;
+  }
+  .score {
+    margin-left: 1.5rem;
+  }
+  .whos-move {
+    font-size: 40px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
